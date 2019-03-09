@@ -164,7 +164,7 @@ header div{
     box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     width:10rem;
     margin:10px;
-    padding:15px;
+    padding:12px;
 }
 .buy__item--cart--added{
     border:1px solid rgba(0, 128, 0, 0.7);
@@ -243,7 +243,7 @@ header div{
     display:flex;
     flex-direction:column;
     justify-content:space-around;
-    background-color:#eee;
+    background-color:white;
     margin:30px;
     padding:30px;
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
@@ -251,7 +251,7 @@ header div{
 .payment-method{
     padding:.7rem;
     border-radius:.5rem;
-    border:1px solid #fe7900;
+    border:1px solid #4dcf4d;
     background-color: #eee;
     margin:5px;
 }
@@ -261,26 +261,26 @@ header div{
     justify-content:space-around;
     margin:20px;
     padding:20px;
-    background-color:#ffe3ca;
+    background-color:#d9ffd9;
     transition: all 4s ease;
 }
 .payment-method-card input{
     padding:10px;
     margin:10px;
-    border:1px solid #ff9532;
+    border:1px solid #4dcf4d;
     border-radius:.5rem;
     outline:none;
 }
 [type=submit]{
     color:aliceblue;
-    background-color:#3894bc;
+    background-color:#4dcf4d;
     border-radius:.5rem;
     border:none;
     padding:10px;
     margin:10px;
 }
 label{
-    color:#ff9532;
+    color:black;
 }
 .payment-method span img{
     float:right;
