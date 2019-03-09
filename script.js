@@ -127,3 +127,21 @@ document.getElementsByClassName("buy__item--reset")[i].addEventListener("click",
     document.getElementsByClassName("checkout__details--item")[i].innerHTML='';
 })
 }
+
+(()=>{ const slicer = (text) => text.slice(0,4) + '-' + text.slice(4,8) + '-' + text.slice(8,12) + '-' + text.slice(12,16);
+        document.getElementsByClassName("card-number-dashes")[0].addEventListener("blur", ()=>{
+            document.getElementsByClassName("card-number-dashes")[0].value=`${slicer(document.getElementsByClassName("card-number-dashes")[0].value)}`
+            document.getElementsByClassName("card-number-dashes")[0].classList.remove("card-number-dashes");
+        })})()
+        
+        
+            document.getElementsByName("payment-method")[0].addEventListener("click",()=>{
+                if(document.getElementsByName("payment-method")[0].checked === true){
+                    document.getElementsByClassName("payment-method-card")[0].style.display='flex';
+                }
+            })
+            document.getElementsByName("payment-method")[1].addEventListener("click",()=>{
+                if(document.getElementsByName("payment-method")[1].checked === true){
+                    document.getElementsByClassName("payment-method-card")[0].style.display='none';
+                }else{}
+            })

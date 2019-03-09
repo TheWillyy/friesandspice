@@ -85,6 +85,7 @@ header div{
     color:white;
 }
 .buy{
+    margin:30px;
     display:grid;
     /* width:inherit; */
     margin-top:1rem;
@@ -237,6 +238,54 @@ header div{
     padding:20px;
     text-decoration:none;
     border-radius:20px;
+}
+.payment{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    background-color:#eee;
+    margin:30px;
+    padding:30px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+}
+.payment-method{
+    padding:.7rem;
+    border-radius:.5rem;
+    border:1px solid #fe7900;
+    background-color: #eee;
+    margin:5px;
+}
+.payment-method-card{
+   display:none;
+    flex-direction:column;
+    justify-content:space-around;
+    margin:20px;
+    padding:20px;
+    background-color:#ffe3ca;
+    transition: all 4s ease;
+}
+.payment-method-card input{
+    padding:10px;
+    margin:10px;
+    border:1px solid #ff9532;
+    border-radius:.5rem;
+    outline:none;
+}
+[type=submit]{
+    color:aliceblue;
+    background-color:#3894bc;
+    border-radius:.5rem;
+    border:none;
+    padding:10px;
+    margin:10px;
+}
+label{
+    color:#ff9532;
+}
+.payment-method span img{
+    float:right;
+    height:20px;
+    width:20px;
 }
 
 

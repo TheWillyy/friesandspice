@@ -26,8 +26,8 @@
     </header>
 
     <div class="buy--container" class="buy--container">
-        <h2 class="buy--container_h2">Place an order</h2>
-        <i class="buy--container_i">make awesome combinations</i>
+        <h2 class="buy--container_h2">Place an Order</h2>
+        <i class="buy--container_i">snack time is anytime</i>
         
         <div class="buy">
                 
@@ -244,9 +244,46 @@
               
         </div>
 
+        <div class="payment">
+                <h3>Payment Method</h3>
+                <div class="payment-method">
+                    <span>
+                        <input type="radio" name="payment-method" value="card" id="payment-card">
+                        Card
+                        <img src="flaticon/mastercard.png" width="20px" height="20px">
+                        <img src="flaticon/visa.png" width="20px" height="20px">
+                    </span>
+                </div>
+                
+                <div class="payment-method-card">
+                        <label for="card-number">Card Number</label>
+                        <input class="card-number card-number-dashes" name="card-number" type="" placeholder="8888-8888-8888-8888" required>
+                        
+                        <label for="expiry">Expiry</label>
+                        <input name="expiry" type="number" placeholder="MM/YY" required>
+                        
+                        <label for="cvv">CVV</label>
+                        <input name="cvv" type="number" placeholder="XXX" required>
+                </div>
+        
+                    <div class="payment-method">
+                        <input type="radio" name="payment-method" value="paypal">
+                        Paypal
+                        <img style="float:right;" src="flaticon/paypal.png" width="20px" height="20px">
+                    </div>
+        
+                    <input type="submit" ></input>
+                    <p>By Clicking the Button, you agree to our Terms and Conditions</p>
+                    </div>
+            </div>
         
 
     </div>
+
+    <footer>
+        made with 
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
