@@ -32,7 +32,7 @@ header div{
     /* margin-bottom:10vh;*/
 }
 .scroll-nav{
-    border-top: 4px solid #ff7900;
+    border-top: 3px solid #ff7900;
     width:100%;
     display:none;
     position:sticky;
@@ -41,7 +41,6 @@ header div{
     justify-content:space-between;
     background-color:rgba(255, 228, 205, 0.945);
     box-shadow:0px 2px 2px rgba(0,0,0,0.2);
-    border-radius: 0 0 .6rem .6rem;
 }
 .scroll-nav img{
    align-self:center;
@@ -67,21 +66,10 @@ header div{
     display:inline-block;
     padding:5px;
 }
-@keyframes slideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(-70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
 .scrollslide{
     animation: slideup .5s ease;
     display:flex;
 }
-
 .header{
     margin:0;
     padding:0;
@@ -159,14 +147,18 @@ header div{
     box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     color:black;
 }
+.buy__item:hover{
+    transform:scale(1.01);
+    transition: all .2s ease;
+}
 .buy__item--img{
     /* margin:20px; */
     background: url("puff-puff.png");
-    background-attachment:fixed;
     background-size:cover;
     width:100%;
     height:100%;
     justify-self:left;
+    border-radius: 10px 0 0 10px;
 }
 .buy__item--details{
     text-align:center;
