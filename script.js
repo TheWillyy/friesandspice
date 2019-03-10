@@ -138,14 +138,14 @@ for(let i=0; i<itemslist.length; i++){
                 if(i===0){
                         document.getElementsByName("payment-method")[i].addEventListener("click",()=>{
                         if(document.getElementsByName("payment-method")[i].checked === true){
-                        document.getElementsByClassName("payment-method-card")[0].style.opacity=1;
+                        document.getElementsByClassName("payment-method-card")[0].classList.add("payment-method-show");
                         }else{}
                     })  
                 }
                 else{
                         document.getElementsByName("payment-method")[i].addEventListener("click",()=>{
                         if(document.getElementsByName("payment-method")[i].checked === true){
-                        document.getElementsByClassName("payment-method-card")[0].style.opacity=0;
+                        document.getElementsByClassName("payment-method-card")[0].classList.remove("payment-method-show");
                         }else{}
                     })
             }

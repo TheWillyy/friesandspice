@@ -160,13 +160,13 @@ header div{
     color:black;
 }
 .buy__item--img{
-    margin:20px;
+    /* margin:20px; */
     background: url("puff-puff.png");
-    border-radius: inherit;
+    background-attachment:fixed;
     background-size:cover;
-    width:40%;
-    height:88%;
-    overflow:hidden;
+    width:100%;
+    height:100%;
+    justify-self:left;
 }
 .buy__item--details{
     text-align:center;
@@ -314,12 +314,22 @@ header div{
 .payment-method-card{
     display:flex;
     opacity:0;
+    visibility:hidden;
     flex-direction:column;
     justify-content:space-around;
+    margin:0;
+    padding:0;
+    background-color:#d9ffd9;
+    height:0;
+    transition: all .2s ease;
+}
+.payment-method-show{   
+    visibility:visible;
+    opacity:1;    
+    transition: all .2s ease;
+    height:auto;
     margin:20px;
     padding:20px;
-    background-color:#d9ffd9;
-    transition: all .2s ease;
 }
 .payment-method-card input{
     padding:10px;
