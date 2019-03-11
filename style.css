@@ -8,76 +8,109 @@ html{
     scroll-behavior:smooth;
     margin:0;
     border:0;
+    width:100%;
 }
 button{
     outline:none;
 }
 header{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
     margin:0;
     padding:0;
     font-size:1.5rem;
     color:white;
-    background: url("img/bkggui.png")/*linear-gradient(rgba(254,121,0,0.7),rgba(0,0,0,1)),*/ ; 
+    background:linear-gradient(to bottom, rgba(254,121,0,0.5),rgba(0,0,0,.5)), url("img/bkggui.png"); 
     background-size:cover;
     background-attachment: fixed;
     background-repeat:no-repeat;
-    width:100%; 
+    /* width:100%;  */
     height:90vh;
 }
-header div{
-    display:block;
-    /* margin-bottom:10vh;*/
-}
-.scroll-nav{
-    border-top: 3px solid #ff7900;
+.scroll__nav{
     width:100%;
-    display:none;
-    position:sticky;
-    top:0;
-    z-index:2;
+    display:flex;
+    z-index:1;
     justify-content:space-between;
-    background-color:rgba(255, 228, 205, 0.945);
-    box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+    align-items:center;
+    transition:all .2s ease;
 }
-.scroll-nav img{
-   align-self:center;
-   height:50px;
-   width:50px;
-   margin-left:5px;
-   filter: invert(57%) sepia(87%) saturate(3757%) hue-rotate(1deg) brightness(1.5);
-}
-.scroll-nav nav{
+.scroll__nav img{
+    height:100px;
+    width:100px;
+    margin-left:5px;
+    filter: none;
+ }
+ .scroll__nav nav{
     display:flex;
     justify-content:space-between;
     font-size:1.2rem;
     margin-right:10px;
-    color:#ff7900;
+    color:white;
     text-decoration:none;
-}
-.scroll-nav a{ 
-    color:#ff7900;
+ }
+ .scroll__nav a{ 
+    color:white;
     text-decoration:none;
-}
-.scroll-nav li{
+ }
+ .scroll__nav li{
     list-style-type:none;
     display:inline-block;
-    padding:5px;
+    padding:1rem;
 }
-.scrollslide{
-    animation: slideup .5s ease;
-    display:flex;
+.scroll__nav li:hover{
+    background-color:rgba(255,255,255,0.2);
+    border-bottom:2px solid #ff7900;
+    transition:all .2s ease;
 }
-.header{
-    margin:0;
-    padding:0;
+.scroll__nav--onscroll{
+    border-top: 3px solid #ff7900;
+    position:fixed;
     display:flex;
-    align-items:center;
+    top:0;
+    overflow-x:hidden;
+    z-index:1;
     justify-content:space-between;
-    width:100%;
-    height:100%;
+    background-color:rgba(255, 255, 255, 0.9);/*rgba(255, 228, 205, 0.945); */
+    box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+    align-items:center;
+    transition:all .2s ease; 
+}
+.scroll__nav--onscroll img{
+   align-self:center;
+   height:50px;
+   width:50px;
+   margin-left:30px;
+   filter: invert(57%) sepia(87%) saturate(3757%) hue-rotate(1deg) brightness(1.5);
+}
+.scroll__nav--onscroll nav{
+    display:flex;
+    justify-content:space-between;
+    font-size:1.2rem;
+    margin-right:30px;
+    color:#ff7900;
+    text-decoration:none;
+}
+.scroll__nav--onscroll a{ 
+    color:#ff7900;
+    text-decoration:none;
+}
+.scroll__nav--onscroll li{
+    padding:10px;
+}
+.scroll__nav--onscroll li:hover{
+    border-bottom:.5px solid #ff7900;
+    transition:all .2s ease;
+}
+.header-content{
+    display:flex;
+    align-items:flex-end;
+    height:50vh;
+    justify-content:center;
+    /* position:absolute;
+    margin:20vh 0 0 50vh; */
+}
+.header-content div:nth-of-type(2){
+    align-self:flex-end;
+    margin-bottom:30px;
 }
 .header-text{
     align-self:center;
@@ -104,7 +137,7 @@ header div{
 .header nav li:hover{
     background-color: rgba(255,255,255,0.3);
     transition:.3s ease;
-}
+} 
 .buy_now{
     text-decoration: none;
     color:black;/*rgba(254,121,1); */
@@ -113,25 +146,20 @@ header div{
 .btn-round{
     font-size:1.2rem;
     padding:.6rem;
-    /* border:2px solid #fe7900; */
     border-radius:1.5rem;
 }
-#buy--container{
- /* yes you can use an id and a class */
-}
 .buy--container{
-    background-color: #ff9532;
+    background-color:#ddd;
     padding:10px;
     margin-top:50px;
     line-height:5px;
 }
 .buy--container_h2,.buy--container_i{
-    color:white;
+    color:#ff7900;
 }
 .buy{
     margin:30px;
     display:grid;
-    /* width:inherit; */
     margin-top:1rem;
     grid-template-columns:repeat(2,1fr);
     grid-gap: 1rem;
@@ -142,7 +170,6 @@ header div{
     align-items: center;
     height:20rem;
     background-color:#eee;
-    /* margin:10px 0; */
     border-radius:10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     color:black;
@@ -157,7 +184,6 @@ header div{
     background-size:cover;
     width:100%;
     height:100%;
-    justify-self:left;
     border-radius: 10px 0 0 10px;
 }
 .buy__item--details{
@@ -191,20 +217,15 @@ header div{
 }
 .buy__item--cart:hover,
 .buy__item--cart:active{
- /* background-color:rgba(0, 128, 0, 0.3); */
  background-color:rgba(254, 123, 0, 0.4);
- /* border: .5px solid green; */
  transition:all 0.2s;
 }
 .buy__item--reset:hover,
 .buy__item--reset:active{
     background-color:rgba(128, 0, 0, 0.5);
-    /* border: .5px solid red; */
     transition:all 0.2s;
 }
 .buy__item--cart{
-    /* border:1px solid rgba(0, 128, 0, 0.7);
-    color:green; */
     color:#fe7900;
     border:1px solid #fe7900;
     border-radius: .5rem;
@@ -222,7 +243,6 @@ header div{
     box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 .buy__item--cart--added:hover{
-    border:1px solid rgba(0, 128, 0, 0.7);
     color:green;
     border-radius: .5rem;
     background-color:#ddd;
@@ -233,8 +253,8 @@ header div{
     width:10rem;
 }
 .buy__item--reset{
-    border:none;
     color:white;
+    border:none;
     border-radius:.5rem;
     background-color:#ff3e3e;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
@@ -245,10 +265,11 @@ header div{
 .buy__item--price{
     text-align:center;
     color:white;
-    background: linear-gradient(to left,hsl(29, 100%, 80%),#fe7900);
-    padding:20px;
+    background: linear-gradient(to left,#ffca99,#fe7900);
+    padding:15px;
     font-size:2rem;
-    box-shadow:1px 1px 1px rgba(0,0,0,0.5);
+    box-shadow:1px 1px 1px rgba(0,0,0,0.3) inset;
+    border-radius:.5rem
 }
 .checkout{
     display:flex;
@@ -335,8 +356,12 @@ header div{
     background-color:#4dcf4d;
     border-radius:.5rem;
     border:none;
-    padding:10px;
+    padding:15px;
     margin:10px;
+}
+[type=submit]:hover{
+    color:aliceblue;
+    background-color:#83cf83;
 }
 label{
     color:black;
@@ -356,7 +381,22 @@ footer{
 }
 
 
-@media (max-width:720px){
+@media (max-width:480px){
+    header{
+        height:80vh;
+    }
+    .scroll__nav--onscroll{
+        margin:0;
+    }
+    .scroll__nav li{
+        padding:.5rem;
+        margin:0;
+        font-size:.7rem;
+    }
+    .header-content{
+        height:70vh;
+        transform:scale(.6);
+    }
     .buy{
         display:grid;
         width:inherit;
@@ -367,7 +407,7 @@ footer{
         display:flex;
         flex-direction:column;
         justify-content:space-around;
-        height:30rem;
+        height:20rem;
         align-items: center;
         background-color:#eee;
         margin:10px 0;
@@ -376,21 +416,33 @@ footer{
         color:black;
     }
     .buy__item--img{
-        margin:10px;
-        background: url("puff-puff.png");
-        border-radius: inherit;
-        background-size:cover;
-        width:70%;
-        height:70%;
+        background-size:contain;
+        background-repeat:no-repeat;
+        width:100%;
+        height:100%;
         overflow:hidden;
+        border-radius: .5rem .5rem 0 0;
     }
     .buy__item--details{
         width:100%;
+        font-size:.55rem;
+    }
+    .buy__item--cart, .buy__item--reset{
+        padding:.5rem;
+        margin:.5rem;
+    }
+    .buy__item--price{
+        font-size:1rem;
+        margin:.5rem;
+    }
+    .buy__item--button{
+        height:40px;
+        width:40px;
     }
     .checkout__details{
         display:flex;
         flex-direction:column;
         align-items:center;
-        justify-content:space-around;
+        justify-content:space-between;
     }
 }

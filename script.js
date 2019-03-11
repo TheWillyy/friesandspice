@@ -112,8 +112,8 @@ for(let i=0; i<itemslist.length; i++){
 
     document.getElementsByClassName("buy__item--reset")[i].addEventListener("click", ()=>{
         buy[i].quantity=0;
-        document.getElementsByClassName("checkout__details--price")[0].innerHTML-=buy[i].price;
         buy[i].price=0;
+        document.getElementsByClassName("checkout__details--price")[0].innerHTML-=buy[i].price;
         document.getElementsByClassName("buy__item--qty")[i].innerHTML=buy[i].quantity;
         document.getElementsByClassName("buy__item--cart")[i].classList.remove("buy__item--cart--added");
         document.getElementsByClassName("checkout__details--item")[i].innerHTML='';
@@ -153,10 +153,10 @@ for(let i=0; i<itemslist.length; i++){
 
         window.onscroll = ()=>{
             if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
-                document.getElementsByClassName("scroll-nav")[0].classList.add("scrollslide");
+                document.getElementsByClassName("scroll__nav")[0].classList.add("scroll__nav--onscroll");
                 // document.getElementsByClassName("scroll-nav")[0].style.top = "0";
               } else {
-                document.getElementsByClassName("scroll-nav")[0].classList.remove("scrollslide");
+                document.getElementsByClassName("scroll__nav")[0].classList.remove("scroll__nav--onscroll");
                 // document.getElementsByClassName("scroll-nav")[0].style.top = "-50";
               }
         }
